@@ -1,0 +1,599 @@
+/*
+---- means end of page coding
+--- means the page style will still be decided
+-- means source
+!! means scratch
+                                          */
+
+/* Fonts */
+@font-face{
+  font-family: 'SCstyle';
+  src: url('fonts/steel-city.ttf');
+}
+
+@font-face {
+  font-family: 'tmoReg';
+  src: url('fonts/TextMeOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'BroadcastTitle';
+  src: url('fonts/BroadcastTitling.ttf');
+}
+
+@font-face {
+  font-family: 'Sacramento';
+  src: url('fonts/Sacramento-Regular.ttf');
+}
+
+/* ---- */
+
+
+/* Keyframs */
+@keyframes homeAppear{
+  25%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0.8;
+    color: #b87672;
+  }
+  50%{
+    opacity: 1;
+    color: #b87672;
+  }
+  60%{
+    opacity: 0.6;
+    color: #b87672;
+  }
+  75%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0.8;
+    color: #FFF;
+  }
+  100%{
+    opacity: 1;
+    color: #FFF;
+  }
+}
+
+@keyframes moveAppear /* For Ot Products */ {
+  50%{
+    color: #6E6E69;
+    text-shadow: 5px 5px 5px #94948f;
+  }
+  75%{
+    color: #a3a393;
+    text-shadow: 5px 5px 5px #b0b086;
+  }
+  100%{
+    #color: #6b6b64;
+    text-shadow: 5px 5px 5px #70705e;
+  }
+}
+
+@keyframes otprodAppear{
+  25%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0.5
+  }
+  75%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0.5;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    color: #000;
+  }
+}
+
+/* ---- */
+
+
+/* General */
+body{
+  overflow: inherit;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  width: 1265px;
+  margin: 0 auto;
+}
+
+header{
+  background-color: #2B2418;
+  width: 100%;
+  height: 80px;
+  color: #FFF;
+  position: fixed;
+}
+
+#headerTitle{
+  float: left;
+  padding-left: 20px;
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+nav{
+  float: right;
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav ul li{
+  width: 120px;
+  float: left;
+}
+
+nav ul li a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFF;
+}
+
+header nav a:hover{
+  opacity: 0.5;
+  color: #e6584e;
+}
+
+/* ---- */
+
+
+/* Home */
+#home{
+  overflow: hidden;
+}
+
+#home section{
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+  color: #FFF;
+  padding-top: 40px;
+}
+
+#subContent{
+  height: 185px;
+  background-color: #2B2418;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.subDiv{
+  float: left;
+  width: 350px;
+  padding: 30px;
+}
+
+.subDesc{
+  text-align: justify;
+  color: #FFF;
+}
+
+.subDesc h2{
+  font-size: 25px;
+}
+
+.subDesc p{
+  overflow: hidden;
+  font-size: 15px;
+  color: #C0B7A6;
+}
+
+.subDesc a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+#homeContent{
+  color: #FFF;
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 0;
+}
+
+#homeContent h1, #homeContent h3{
+  font-family: "tmoReg";
+  font-size: 60px;
+  text-shadow: 5px 5px 5px #949191;
+  -webkit-animation: homeAppear 2s 0.5s both infinite;
+  animation: homeAppear 2s 0.5s both infinite;
+}
+
+#productBtn{
+  width: 250px;
+  margin: 50px auto;
+  padding: 20px;
+  border: solid 3px #464646;
+  border-radius: 30px;
+}
+
+#productBtn:hover{
+  color: #fff;
+  background-color: #a19f9f;
+  border: outset #a19f9f 3px;
+  text-shadow: 3px 3px 3px #464646;
+  cursor: pointer;
+}
+
+#productBtn a{
+  text-decoration: none;
+  color: #464646;
+  font-size: 35px;
+}
+
+/* ---- */
+
+/* Abouts */
+#about{
+  overflow: hidden;
+  background-image: url('https://img.freepik.com/free-photo/pastel-background-sky-feminine-style_53876-104862.jpg?size=626&ext=jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#videoContent{
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  padding-top: 7em;
+  font-family: Arial;
+}
+
+#envVid{
+  margin-top: 20px;
+}
+
+#aboutContent{
+  background-color: #2B2418;
+  margin-top: 20em;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px;
+  color: #fff;
+}
+
+#aboutDesc{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+
+#aboutDesc h2{
+  color: #C0B7A6;
+  font-family: 'SCstyle';
+}
+
+#aboutDesc p{
+	color: #C0B7A6;
+  font-family: "tmoReg";
+}
+
+/* --- */
+
+/* Products */
+#prod{
+  background-color: #2C2318;
+  overflow-y: scroll;
+}
+
+#prodBanner{
+  height: 265px;
+  text-align: center;
+}
+
+#prodBanner h1{
+  color: #6E6E69;
+  font-size: 90px;
+  padding-top: 70px;
+}
+
+.prodTitle{
+  margin-top: 60px;
+  height: 265px;
+  text-align: justify;
+}
+
+.prodDiv{
+  width: 600px;
+  background-color: #FFF;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.prodDesc{
+  margin-left: 10px;
+  display: inline-block;
+  width: 458px;
+  height: 110px;
+  text-align: justify;
+}
+
+.prodDesc h2{
+  font-size: 20px;
+}
+
+#otProdNav{
+  border: solid #323 2px;
+  border-radius: 30px;
+  width: 300px;
+  height: 20px;
+  margin-left: 900px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  word-wrap: normal;
+}
+
+#otProdNav a{
+  color: #7a7c7d;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#otProdNav:hover{
+  background-color: #323;
+  cursor: pointer;
+}
+
+/* Other Products */
+#otherProd{
+  overflow: hidden;
+  background-image: url('imgs/otProdBg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#OtProdBanner{
+  height: 270px;
+  text-align: center;
+}
+/* !! https://cutewallpaper.org/21/background-images-for-websites/black-background-websites-The-Texture-Suite.jpg */
+
+#OtProdBanner h1{
+  color: #6E6E69;
+  font-size: 90px;
+  padding-top: 80px;
+  text-shadow: 5px 5px 5px #94948f;
+  -webkit-animation: 3s 0.5s both infinite;
+  animation: moveAppear 3s 0.5s both infinite;
+}
+
+#OtProdBanner h3{
+  color: #000;
+  font-size: 30px;
+  margin-left: 230px;
+  -webkit-animation: moveAppear 3s 1s both infinite;
+  animation: moveAppear 3s 1s both infinite;
+}
+
+.OtProdDiv{
+  width: 600px;
+  background-color: #FFF;
+  margin-top: 10px;
+  padding: 10px;
+  opacity: 0;
+}
+
+.OtProdDiv:nth-child(1){
+  -webkit-animation: otprodAppear 3s 1s both;
+  animation: otprodAppear 3s 1s both;
+}
+
+.OtProdDiv:nth-child(2){
+  -webkit-animation: otprodAppear 3s 1s both;
+  animation: otprodAppear 3s 1s both;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.OtProdDesc{
+  margin-left: 10px;
+  display: inline-block;
+  width: 458px;
+  height: 160px;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.OtProdDesc h2{
+  font-size: 20px;
+}
+
+.OtProdDiv img{
+  width: 125px;
+  float: left;
+}
+
+.productButtonOtp{
+  border: solid #000 2px;
+  border-radius: 30px;
+  width: 10em;
+  height: 3em;
+  text-align: center;
+}
+
+.productButtonOtp a{
+  text-decoration: none;
+  font-size: 30px;
+  color: #000;
+  padding: 10px;
+}
+
+.productButtonOtp:hover{
+  background-color: #87888a;
+  opacity: 0.7;
+}
+
+#prodNav{
+  border: solid #323 2px;
+  border-radius: 30px;
+  width: 350px;
+  height: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  word-wrap: normal;
+}
+
+#prodNav a{
+  color: #7a7c7d;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#prodNav:hover{
+  background-color: #323;
+  cursor: pointer;
+}
+
+/* Other Product 1 (Club Sandwich) */
+#otProd1{
+  overflow: hidden;
+}
+
+.otProdCsBase{
+  background-color: #6E6967;
+  width: 70%;
+  height: 80%;
+  margin-left: 10em;
+  margin-top: 9em;
+}
+
+.otProdInfo img{
+  float: left;
+}
+
+.otProdInfoCsDesc{
+  text-align: justify;
+}
+
+.otProdInfoCsDesc h1{
+  font-size: 40px;
+}
+
+.otProdInfoCsDesc h2{
+  font-size: 30px;
+}
+
+.otProdInfoCsDesc p{
+  font-size: 25px;
+}
+
+/* --- */
+
+/* Registration */
+#registration{
+  overflow: hidden;
+  background: url("https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-01.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* -- https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-01.jpg */
+
+#registerContent{
+  height: 100vh;
+  padding-top: 50px;
+}
+
+#formDiv{
+  width: 30em;
+  margin-top: 2em;
+  margin-bottom: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+  height: 40em;
+  padding: 50px 150px;
+}
+
+#formDiv h2{
+  font-size: 40px;
+}
+
+#formDiv label{
+  font-size: 20px;
+  display: inline-block;
+  width: 300px;
+  margin-top: 20px;
+}
+
+#formDiv input[type="text"], #formDiv input[type="email"], #formDiv input[type="password"]{
+  width: 300px;
+  border-radius: 15px;
+  outline: none;
+  padding: 5px;
+}
+
+#formDiv input:focus{
+  border: outset black;
+}
+
+#formSubmitBtn{
+  font-size: 30px;
+  border: 0;
+  width: 300px;
+  color: #FFF;
+  background-color: #000;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+#formSubmitBtn a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+#formSubmitBtn:hover{
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.centerDiv{
+  width: 80%;
+  margin: 0 auto;
+}

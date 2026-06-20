@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Addition Calculator</title>
+</head>
+<body>
+    <form>
+        <label for="num1">First number: </label>
+        <input type="number" id="num1" name="num1"> <br><br>
+
+        <label for="num2">Second Number: </label>
+        <input type="number" id="num2" name="num2"> <br><br>
+
+        <button type="button" onclick="addBtn()">Add Numbers!</button>
+    </form>
+
+    <h2>Result: <span id="result"></span></h2>
+
+    <script>
+        function addBtn(){
+            // Get current values when button is clicked
+            var num1 = parseFloat(document.querySelector("#num1").value) || 0;
+            var num2 = parseFloat(document.querySelector("#num2").value) || 0;
+            
+            // Perform numeric addition
+            let result = num1 + num2;
+            
+            // Display result in the span element
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>

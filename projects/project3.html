@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/projects.js" defer></script>
+</head>
+<body id="projects">
+    <div id="container">
+        <div id="currentTime"></div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a> </li
+                        >
+                    <li><a href="abouts.html">ABOUTS</a> </li>
+
+                    <li><a href="projects.html">PROJECTS</a> </li>
+
+                    <li><a href="resume.html">RESUME</a> </li>
+
+                    <li><a href="contacts.html">CONTACTS</a> </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="projects">
+            <div id="projects-header">
+                <h1>Projects</h1>
+                <p>A collection of things I've built</p>
+            </div>
+ 
+            <div id="projects-container">
+                <button id="add-project-btn" aria-label="Add a new project">
+                    <span class="add-icon">+</span>
+                    <span class="add-label">Add Project</span>
+                </button>
+            </div>
+        </section>
+    </div>
+ 
+    <!-- ADD PROJECT MODAL -->
+    <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+        <div class="modal-box">
+            <h2 id="modal-heading">Add Project</h2>
+ 
+            <div class="modal-field">
+                <label for="modal-title">Project Name</label>
+                <input type="text" id="modal-title" placeholder="e.g. Coffee Mania">
+            </div>
+ 
+            <div class="modal-field">
+                <label for="modal-lang">Subject / Language</label>
+                <input type="text" id="modal-lang" placeholder="e.g. HTML, C++, JS">
+            </div>
+ 
+            <div class="modal-field">
+                <label for="modal-tags">Tech Tags <span class="field-hint">(comma-separated)</span></label>
+                <input type="text" id="modal-tags" placeholder="e.g. HTML,CSS,JavaScript">
+            </div>
+ 
+            <div class="modal-field">
+                <label for="modal-href">Link or Folder Path</label>
+                <input type="text" id="modal-href" placeholder="e.g. projects/my-project or https://github.com/...">
+            </div>
+ 
+            <p id="modal-error" class="modal-error" aria-live="polite"></p>
+ 
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn-ghost">Cancel</button>
+                <button id="modal-submit" class="btn-solid">Add Project</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
