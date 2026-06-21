@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Food Ordering System | Portfolio</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../scripts/main.js" defer></script>
 </head>
@@ -18,8 +18,6 @@
                     <li><a href="../abouts.html">ABOUTS</a> </li>
 
                     <li><a href="../projects.html">PROJECTS</a> </li>
-
-                    <li><a href="../resume.html">RESUME</a> </li>
 
                     <li><a href="../contacts.html">CONTACTS</a> </li>
                 </ul>
@@ -36,19 +34,78 @@
                     <details>
                         <summary>About the Project</summary>
                         <p>
-                            This project is created by five people, led by John Miguel L. Fetalcorin.
+                            This project was created by five people with John Miguel L. Fetalcorin being the one who leads his members. They used Git and GitHub as a way to collaborate in doing the project, with some rules made for pushing and merging. They must first ask for the admin if there are any pulls required before they create another branch. Until then, the admin will tell his cooperative to not do anything at the moment or use a different temporary file to test. Once the other is finished, the admin requires everyone to pull after he merges the pull request that member made.
+                        </p>
+                        <p>
+                            Our Food Ordering System is a simple C++ program designed to make ordering food easier and more organized. It allows users to view the menu, choose their meals or combo deals, place orders, and process payments.
+
+                            <br><br>
+
+                            The system also saves order records and generates reference numbers for easier tracking. This project was created to provide a convenient ordering experience while showcasing the use of C++ programming, file handling, and basic system management.
                         </p>
                     </details>
                     <details>
                         <summary>Functional Requirements</summary>
                         <ol>
-                            <li><strong>main()</strong> - info</li>
+                            <li>
+                                <strong>Main Menu</strong> - This shows the main menu and the available options in the program.
+                            </li>
+                            <li>
+                                <strong>Add Order</strong> - An operation for adding an order.
+                            </li>
+                            <li>
+                                <strong>Remove Order</strong> - The user can remove their order via this function.
+                            </li>
+                            <li>
+                                <strong>View Order</strong> - The user can view their order by selecting this module in the main menu.
+                            </li>
+                            <li>
+                                <strong>Checkout Order</strong> - After ordering, the user can checkout. The user will then be asked to pay cash or cashless.
+                            </li>
+                            <li>
+                                <strong>Saving Changes to Files</strong> - The program will automatically save their order in a .csv file type record. The changes in the stock of foods will also be saved by automatically updating the file.
+                            </li>
                         </ol>
                     </details>
                     <details>
                         <summary>File Requirements</summary>
                         <ol>
-                            <li><strong>main</strong> - info</li>
+                            <li>
+                                <strong>structs.h</strong> - contains all the data structure that will be used in the program.
+                            </li>
+                            <li>
+                                <strong>file_handler.h</strong> - contains the function prototypes for the file operations in the program.
+                            </li>
+                            <li>
+                                <strong>order_handler.h</strong> - contains all the prototypes for handling orders.
+                            </li>
+                            <li>
+                                <strong>payment.h</strong> - includes all the function declarations for the payment process
+                            </li>
+                            <li>
+                                <strong>util.h</strong> - includes utility functions.
+                            </li>
+                            <li>
+                                <strong>main.cpp</strong> - the main program.
+                            </li>
+                            <li>
+                                <strong>file_handler.cpp</strong> - defines the functions from the file_handler header file.
+                            </li>
+                            <li>
+                                <strong>order_handler.cpp</strong> - contains the implementation of handling orders.
+                            </li>
+                            <li>
+                                <strong>payment.cpp</strong> - defines all the functions in the payment header file.
+                            </li>
+                            <li>
+                                <strong>util.cpp</strong> - contains the declaration for the utility functions used in this program.
+                            </li>
+                            <li>
+                                <strong>foods.csv</strong> - contains all the data for the food, including its ID, the combo meal details, price, and its stock.
+                            </li>
+                            <li>
+                                <strong>orders.csv</strong> - includes all the orders pending as of the moment.
+                            </li>
                         </ol>
                     </details>
                     <details>
@@ -57,6 +114,9 @@
 
                         <a href="https://github.com/JM21341/Food-Ordering-System" target="_blank"><img src="../imgs/icons/github.png" alt="github-icon"></a> 
                         <h6>View Repository</h6>
+
+                        <a href="https://docs.google.com/document/d/1fe25qfW4AM68hS6ve8LshORk78CCYgty-vYAoc1Vm1Y/edit?usp=sharing" target="_blank"><img src="../imgs/icons/docs.png" alt="docs-icon"></a> 
+                        <h6>View Document</h6>
                     </details>
                 </div>
             </div>
