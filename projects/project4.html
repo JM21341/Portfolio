@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Hotel Management System | Portfolio</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../scripts/main.js" defer></script>
 </head>
@@ -19,8 +19,6 @@
 
                     <li><a href="../projects.html">PROJECTS</a> </li>
 
-                    <li><a href="../resume.html">RESUME</a> </li>
-
                     <li><a href="../contacts.html">CONTACTS</a> </li>
                 </ul>
             </nav>
@@ -28,67 +26,430 @@
         <section id="project4" class="project">
             <div id="project-container">
                 <div id="heading">
-                    <h1>Food Ordering System</h1>
-                    <h2>A collaborative final project for Intermediate Programming</h2>
+                    <h1>Hotel Management System</h1>
+                    <h2>A Final Requirement for Database Management System 1</h2>
                 </div>
 
                 <div id="details-container">
                     <div id="heading">
-                        <h1>Hotel Management System</h1>
-                        <h2>A Final Requirement for Database Management System 1</h2>
+                        <h4>The following may only contain surnames as to protect their privacy.</h4>
                         <h4>Co-Developers: </h4>
                         <ol>
-                            <li>Name</li>
+                            <li>Bacus, D.P.</li>
+                            <li>De Ramos, G.A.</li>
+                            <li>Ferrer, E.B.</li>
+                            <li>Fetalcorin, J.M.L.</li>
+                            <li>Igig, V.G.N.</li>
+                            <li>Olvida, A.L.A.</li>
+                            <li>Quiambao, J.P.D.</li>
+                            <li>Taberdo, R.S.Q.</li>
+                            <li>Zafra, J.B.J.</li>
                         </ol>
                     </div>
 
                     <div id="diagrams">
                         <details>
                             <summary>Table Dictionary</summary>
-                            <h2>Made by: {Name}</h2>
+                            <h2>Made by: Taberdo</h2>
 
-                            <h3>Guest_TBL</h3>
+                            <h3><strong>Database Name:</strong> hotel_db</h3>
+
+                            <!-- LIST OF TABLES-->
+                            <h3>List of Tables</h3>
                             <table>
                                 <tr>
-                                    <th>Header Cell</th>
+                                    <th>Table Name</th>
+                                    <th>Description</th>
                                 </tr>
                                 <tr>
-                                    <td>Stuff</td>
+                                    <td>TBL_BOOKING</td>
+                                    <td>This table is for reservation transactions made by guests.</td>
+                                </tr>
+                                <tr>
+                                    <td>TBL_GUEST</td>
+                                    <td>This table is for storing information about Hotel guests.</td>
+                                </tr>
+                                <tr>
+                                    <td>TBL_ROOM</td>
+                                    <td>This table is for the room's information</td>
+                                </tr>
+                                <tr>
+                                    <td>TBL_PAYMENT</td>
+                                    <td>This table is for storing payment information.</td>
+                                </tr>
+                                <tr>
+                                    <td>TBL_STAFF</td>
+                                    <td>This table is for the hotel employees' information.</td>
                                 </tr>
                             </table>
 
-                            <h3>Staff_TBL</h3>
+                            <!-- BOOKING TABLE-->
+                            <h3>TBL_BOOKING</h3>
                             <table>
                                 <tr>
-                                    <th>Header Cell</th>
+                                    <th>Attributes</th>
+                                    <th>Data Type</th>
+                                    <th>Descripption</th>
                                 </tr>
                                 <tr>
-                                    <td>Stuff</td>
+                                    <td>Booking id</td>
+                                    <td>int, primary key</td>
+                                    <td>Unique identifier and primary key for the reservation transaction.</td>
+                                </tr>
+                                <tr>
+                                    <td>Guest id</td>
+                                    <td>int, foreign key</td>
+                                    <td>Foreign key referencing the guest who made the reservation. </td>
+                                </tr>
+                                <tr>
+                                    <td>Room id</td>
+                                    <td>int, foreign key</td>
+                                    <td>Foreign key referencing the specific room reserved</td>
+                                </tr>
+                                <tr>
+                                    <td>Staff id</td>
+                                    <td>int, foreign key</td>
+                                    <td>Foreign key referencing the employee who processed the booking.</td>
+                                </tr>
+                                <tr>
+                                    <td>Booking status</td>
+                                    <td>varchar</td>
+                                    <td>Current state of the reservation.</td>
+                                </tr>
+                                <tr>
+                                    <td>Check_in_date</td>
+                                    <td>date</td>
+                                    <td>The scheduled or actual date the guest arrives.</td>
+                                </tr>
+                                <tr>
+                                    <td>Check_out_date</td>
+                                    <td>date</td>
+                                    <td>The scheduled or actual date the guest vacates the room.</td>
+                                </tr>
+                            </table>
+
+                            <!-- GUEST TABLE-->
+                            <h3>TBL_GUEST</h3>
+                            <table>
+                                <tr>
+                                    <th>Attributes</th>
+                                    <th>Data Type</th>
+                                    <th>Descripption</th>
+                                </tr>
+                                <tr>
+                                    <td>Guest id</td>
+                                    <td>int, primary key</td>
+                                    <td>Unique identifier and primary key for each guest.</td>
+                                </tr>
+                                <tr>
+                                    <td>Full name</td>
+                                    <td>varchar</td>
+                                    <td>Complete combined name of the guest for quick display.</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>unique varchar</td>
+                                    <td>Electronic mail address for notifications and billing.</td>
+                                </tr>
+                                <tr>
+                                    <td>Contact number</td>
+                                    <td>unique varchar</td>
+                                    <td>Mobile or telephone number of the guest.</td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>varchar</td>
+                                    <td>Physical home or billing address of the guest.</td>
+                                </tr>
+                            </table>
+
+                            <!-- ROOM TABLE-->
+                            <h3>TBL_ROOM</h3>
+                            <table>
+                                <tr>
+                                    <th>Attributes</th>
+                                    <th>Data Type</th>
+                                    <th>Descripption</th>
+                                </tr>
+                                <tr>
+                                    <td>Room id</td>
+                                    <td>int, primary key</td>
+                                    <td>Unique identifier and primary key for each room.</td>
+                                </tr>
+                                <tr>
+                                    <td>Room type</td>
+                                    <td>varchar</td>
+                                    <td>Category of the room.</td>
+                                </tr>
+                                <tr>
+                                    <td>Room status</td>
+                                    <td>varchar</td>
+                                    <td>Current state of the room.</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacity</td>
+                                    <td>int</td>
+                                    <td>Maximum number of guests allowed to occupy the room.</td>
+                                </tr>
+                                <tr>
+                                    <td>Price</td>
+                                    <td>decimal</td>
+                                    <td>Base nightly rate or standard cost for renting the room.</td>
+                                </tr>
+                                <tr>
+                                    <td>Penalty</td>
+                                    <td>decimal</td>
+                                    <td>Late checkout or damage fee associated with the room.</td>
+                                </tr>
+                            </table>
+
+                            <!-- PAYMENT TABLE-->
+                            <h3>TBL_PAYMENT</h3>
+                            <table>
+                                <tr>
+                                    <th>Attributes</th>
+                                    <th>Data Type</th>
+                                    <th>Descripption</th>
+                                </tr>
+                                <tr>
+                                    <td>Payment id</td>
+                                    <td>int, primary key</td>
+                                    <td>Unique identifier and primary key for each payment.</td>
+                                </tr>
+                                <tr>
+                                    <td>Booking id</td>
+                                    <td>int, foreign key</td>
+                                    <td>Foreign key referencing the corresponding reservation entry.</td>
+                                </tr>
+                                <tr>
+                                    <td>Payment method</td>
+                                    <td>varchar</td>
+                                    <td>Mode of payment used</td>
+                                </tr>
+                                <tr>
+                                    <td>Payment date</td>
+                                    <td>date</td>
+                                    <td>The exact date the payment transaction was processed.</td>
+                                </tr>
+                                <tr>
+                                    <td>Total amount</td>
+                                    <td>decimal</td>
+                                    <td>Total monetary sum paid or owed for the stay.</td>
+                                </tr>
+                                <tr>
+                                    <td>Days stayed</td>
+                                    <td>int</td>
+                                    <td>Total number of nights/days the guest spent in the room. </td>
+                                </tr>
+                                <tr>
+                                    <td>Payment status</td>
+                                    <td>varchar</td>
+                                    <td>Status of the financial transaction.</td>
+                                </tr>
+                            </table>
+
+                            <!-- STAFF TABLE-->
+                            <h3>TBL_STAFF</h3>
+                            <table>
+                                <tr>
+                                    <th>Attributes</th>
+                                    <th>Data Type</th>
+                                    <th>Descripption</th>
+                                </tr>
+                                <tr>
+                                    <td>Staff id</td>
+                                    <td>int, primary key</td>
+                                    <td>Unique identifier and primary key for each staff member.</td>
+                                </tr>
+                                <tr>
+                                    <td>Full name</td>
+                                    <td>varchar</td>
+                                    <td>Complete combined name of the employee.</td>
+                                </tr>
+                                <tr>
+                                    <td>Position</td>
+                                    <td>varchar</td>
+                                    <td>Job title or role assigned to the staff.</td>
+                                </tr>
+                                <tr>
+                                    <td>Contact number</td>
+                                    <td>unique varchar</td>
+                                    <td>Mobile or telephone number of the employee.</td>
+                                </tr>
+                                <tr>
+                                    <td>Minimum salary daily</td>
+                                    <td>decimal</td>
+                                    <td>Minimum baseline daily wage rate for the employee.</td>
+                                </tr>
+                                <tr>
+                                    <td>Days worked</td>
+                                    <td>int</td>
+                                    <td>Number of days rendered by the employee in the current cycle.</td>
+                                </tr>
+                                <tr>
+                                    <td>Monthly salary</td>
+                                    <td>decumal</td>
+                                    <td>Total standard earnings calculated per month. (Minimum salary daily * Days worked)</td>
                                 </tr>
                             </table>
                         </details>
 
                         <details>
                             <summary>Entity Relationship Diagram</summary>
-                            <h2>Made by: {Name}</h2>
-                            <img src="../imgs/erd.jpg" alt="ERD">
+                            <h2>Made by: Fetalcorin</h2>
+                            <img src="../imgs/proj4/erd.jpg" alt="ERD">
                             <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                &emsp; &emsp; Starting off from the top left, an entity named “Guest” is defined. This is the client of the hotel, the customer that the system will take. It contains attributes such as their full name which is split into sub-attributes, their contacts, address, and their very own unique identifier called the “guest_id”. The guests are able to book rooms through the system.
+
+                                <br><br>
+
+                                &emsp; &emsp; The Room entity on the upper right represents the room that the guests can stay in. It has a key attribute named “room_id.” It has its own attributes like its type and room number, the capacity, price, and penalty if there are any damages within the guests' stay.
+
+                                <br><br>
+
+                                &emsp; &emsp; One Staff member can work with many bookings such as the receptionist and room inspector. A staff must have a full name, position, contact number, and shift schedule. A monthly salary attribute calculates the staff's salary by multiplying their minimum salary daily and the amount of days they worked. There is also a key called “staff_id”, which corresponds to only one staff member for each ID. This entity is essential for running the Hotel Management System because they are the one who processes the data manually.
+
+                                <br><br>
+
+                                &emsp; &emsp; Talk about booking, the Booking entity is the main connector for the three entities mentioned above. It has its own key for its own identification for payment later. It contains the room_id, staff_id, and guest_id, which connects all other entities. The booking_status attribute must show if the booking is processed or not, or if it is still in the line. The check in and check out date will be used to calculate the amount of days the guest has stayed. The booking is the very anchor of all these separate entities, which proves its importance in the system.
+
+                                <br><br>
+
+                                &emsp; &emsp; Finally, after all the data processing, the guest can finally go on with the payment. The Payment computes the days stayed and the total amount of the guests' stay. It also provides various mediums for the guest to pay, and will notify the guest of its status. This entity is important for managing payment after a guest's stay.
                             </p>
                         </details>
 
                         <details>
                             <summary>Schema Diagram</summary>
-                            <h2>Made by: {Name}</h2>
-                            <img src="../imgs/erd.jpg" alt="ERD">
+                            <h2>Made by: De Ramos</h2>
+                            <img src="../imgs/proj4/schema.jpg" alt="schema">
                             <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                &emsp; &emsp; The presented Schematic Relational Diagram illustrates the database structure of the Hotel Management System designed to manage guests, staff, rooms, bookings, and payment transactions efficiently. The diagram shows how different tables are interconnected through Primary (PK) and Foreign Key (FK) to maintain data integrity and support hotel operations.
+
+                                <br><br>
+
+                                &emsp; &emsp; The TBL_BOOKING table records reservation transactions made by guests. It contains the unique booking_id as its primary key and foreign keys guest_id, room_id, and staff_id that link the booking to the corresponding guest, room, and staff member. Additional information such as booking status, check-in date, and check-out date is also stored. This table serves as the central table that connects the major entities within the system.
+
+                                <br><br>
+
+                                &emsp; &emsp; The TBL_GUEST table stores information about hotel guests. Each guest is identified using a unique guest_id and includes details such as surname, first name, middle name, full name, email, contact number, and address. This table helps the system maintain records of all guests registered in the hotel.
+
+                                <br><br>
+
+                                &emsp; &emsp; The TBL_ROOM table stores information about rooms available in the hotel. Each room is identified by a unique room_id and contains details such as room type, room number, room status, capacity, price, and penalty. This table allows the system to track room availability and accommodation details.
+
+                                <br><br>
+
+                                &emsp; &emsp; The TBL_PAYMENT table stores payment information related to bookings. It uses booking_id as both its primary key and foreign key, establishing a one-to-one relationship with the booking table. The table includes payment method, payment date, total amount, days stayed, and payment status. This table ensures that each booking has a corresponding payment record.
+
+                                <br><br>
+
+                                &emsp; &emsp; The TBL_STAFF table contains information about hotel employees. Each staff member is identified through a unique staff_id and includes attributes such as surname, first name, middle name, full name, position, contact number, per day salary, monthly salary, days worked, and shift schedule. This table enables the hotel to manage employee records and assign staff members to bookings.
+
+                                <br><br>
+
+                                &emsp; &emsp; The relationship between TBL_GUEST and TBL_BOOKING is one-to-many (1:M) because one guest can make multiple bookings, while each booking belongs to only one guest.
+
+                                <br><br>
+
+                                &emsp; &emsp; The relationship between TBL_ROOM and TBL_BOOKING is one-to-many (1:M) because one room can be booked multiple times over different periods, while each booking refers to only one room.
+
+                                <br><br>
+
+                                &emsp; &emsp; The relationship between TBL_BOOKING and TBL_PAYMENT is one-to-one (1:1) because each booking corresponds to exactly one payment record, and each payment record is associated with only one booking.
+
+                                <br><br>
+                                
+                                &emsp; &emsp; The relationship between TBL_STAFF and TBL_BOOKING is one-to-many (1:M) because one staff member may handle multiple bookings, while each booking is managed by only one staff member.
+
+                                <br><br>
+
+                                &emsp; &emsp; Overall, the relational diagram demonstrates the relationships between guests, staff, rooms, bookings, and payment transactions within the Hotel Management System. The design ensures proper organization of hotel data, supports efficient reservation and payment processing, maintains data integrity through primary and foreign keys, and enables effective management of hotel operations.
                             </p>
                         </details>
 
+                        <details>
+                            <summary>Data Flow Diagram</summary>
+                            <h2>Made by: Igig</h2>
+                            <img src="../imgs/proj4/dfd.jpg" alt="data flow diagram">
+                            <p>
+                                &emsp; &emsp; The diagram shows how data moves through the Hotel Management System between users, processes, and data storage tables. The system starts with the Registration/Login process, where guests, administrators, room inspectors, and receptionists enter their registration or login information. The system checks these details using the User Table and sends back a confirmation or rejection message depending on whether the information is valid.
+
+                                <br><br>
+
+                                &emsp; &emsp; After users successfully log in, they can access the different functions of the system. The Manage Guests process handles guest information by retrieving data from the Guest Table, updating guest records when needed, and saving the changes back to the table. The Manage Rooms process works with room data stored in the Room Table. Room Inspectors can update room status information, and these updates are saved to keep room records accurate and up to date.
+
+                                <br><br>
+
+                                &emsp; &emsp; The system also manages reservations and guest stays. The Record Bookings process receives booking updates from the receptionist and stores them in the Reservation/Booking Table. These reservation records are used during the Check-In/Check-Out process to manage guest arrivals and departures. After check-out, payment information is recorded and stored in the Payment Table for future reference.
+
+                                <br><br>
+
+                                &emsp; &emsp; Lastly, the system generates reports for management purposes. Information from guest records, room records, bookings, and payment transactions is collected and stored in the Report Table. The Generate Reports process uses this data to create reports that are sent to the administrator. These reports help the hotel monitor its operations and make better decisions. Overall, the system ensures that hotel information is properly managed, updated, and available when needed.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>Use Case Diagram</summary>
+                            <h2>Made by: Fetalcorin</h2>
+                            <img src="../imgs/proj4/use-case.jpg" alt="use case diagram">
+                            <p>
+                                &emsp; &emsp; The diagram above shows the use case diagram of the system. It depicts what each role can do once they access the system. There are 4 entities which have a variety of functions, depending on what are assigned to them. All functions are arranged in colors based on whose function it is. Green for guests, red for receptionist, yellow for housekeeping supervisor, purple for super admin, pink for relation and orange for system.
+
+                                <br><br>
+
+                                &emsp; &emsp; Starting off with the Receptionist entity which can login, record booking, view guest details, view receipt, and show the guests' details. The receptionist must login to the system first before accessing their functions. When recording the booking, the receptionist may view the guest details. They can view the receipt and process the payment.
+
+                                <br><br>
+
+                                &emsp; &emsp; The Housekeeping Supervisor can view the room's status and record any damages for penalty charges. This entity must login also before they can record inventory and view the room status. If there are any damages, the system will notify the inspector for repair once they view the room status. The housekeeping supervisor will record the damage, and the system will compute the penalty charges, which will be added to the payment. 
+
+                                <br><br>
+
+                                &emsp; &emsp; The Guest entity is the client which can register/login, book for reservations, and pay for their stay. If the guest is not yet existing, they must register first before logging in. After that, they can book rooms as reservations. After their stay, they can view their receipt and pay for their stay, including the charges.
+
+                                <br><br>
+
+                                &emsp; &emsp; Last but not the least, Admin entity — the most important user. The super admin can do all the things the staff can do, including its own functions. They can manage rooms, records, and all users (including guests). They can monitor the system and may generate reports about the status of the system.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>Conceptual Diagram</summary>
+                            <h2>Made by: Ferrer</h2>
+                            <img src="../imgs/proj4/conceptual.jpg" alt="conceptual diagram">
+                            <p>
+                                &emsp; &emsp; The conceptual diagram shows how the Hotel Management System works and how the different users interact with the system from room reservation up to guest check-out.
+
+                                <br><br>
+
+                                &emsp; &emsp; The Guest is the customer who uses the hotel services. The process begins when the guest registers an account, books a room, and makes a payment through the system. The guest can also view and receive payment receipts. After the booking is confirmed, the guest is assigned to a room and stays for a specific number of days. Once the reservation period is finished, the guest checks out and leaves the room.
+
+                                <br><br>
+
+                                &emsp; &emsp; The Receptionist is responsible for managing guest reservations and assisting guests during the booking process. The receptionist records bookings, checks room availability, views guest details, and processes payments. Any information entered or updated by the receptionist is stored in the database to ensure that guest records remain accurate and up to date.
+
+
+                                <br><br>
+
+                                &emsp; &emsp; The Room Inspector is responsible for checking the condition of hotel rooms before and after guest occupancy. They inspect rooms, update room status, and record inventory information. The room inspector ensures that rooms are clean, complete, and ready for the next guest. All room-related updates are saved in the database for monitoring and management purposes.
+
+                                <br><br>
+
+                                &emsp; &emsp; The Admin has the highest level of access in the system. The admin manages rooms, records, and user accounts. They can also generate reports and monitor the overall performance of the hotel management system. Through the system, the admin oversees all operations and ensures that information is properly maintained.
+
+                                <br><br>
+
+                                &emsp; &emsp; At the center of the system is the Database, which stores all important information such as guest records, room details, booking information, payment transactions, inventory records, and room status. The receptionist, room inspector, and admin can insert, read, and update data according to their responsibilities. The database serves as the central storage that connects all parts of the system.
+
+                                <br><br>
+
+                                &emsp; &emsp; Overall, the process starts when a guest registers and books a room, followed by payment processing and room assignment. The room inspector ensures that the room is available and in good condition, while the receptionist manages guest transactions and reservations. During the guest's stay, all records are maintained in the database. Finally, after the guest checks out, the system keeps the information for future reference and reporting, allowing the hotel to operate efficiently and effectively.
+                            </p>
+                        </details>
                         
                         <div id="project-source">
-                            <a href="https://drive.google.com/drive/folders/1jrjjsdbE8B8MBsXNG6o5YKo-ByIvgJrT?usp=sharing" target="_blank"><img src="../imgs/icons/gdrive.png" alt="gdrive-icon"></a>
+                            <a href="https://drive.google.com/drive/folders/1uo7jALmMV600n_q0-o8AzXAIIFUiNQ2Z?usp=sharing" target="_blank"><img src="../imgs/icons/gdrive.png" alt="gdrive-icon"></a>
                             <h6>View the project here!</h6>
                         </div>
                     </div>

@@ -1016,7 +1016,7 @@ body#project{
  
 /* Inner heading acts as the doc's title bar above the scrollable body */
 #details-container > #heading{
-    text-align: left;
+    text-align: center;
     padding-bottom: 1.2rem;
     border-bottom: 1px solid rgba(165, 164, 164, 0.3);
     margin-bottom: 0.5rem;
@@ -1088,7 +1088,6 @@ body#project{
 /* Dot marker on the rail to the left, like a doc table-of-contents trail */
 #diagrams details::before{
     content: "";
-    position: absolute;
     left: -1.85rem;
     top: 1.6rem;
     width: 8px;
@@ -1098,7 +1097,6 @@ body#project{
 }
  
 #diagrams summary{
-    position: sticky;
     top: 0;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.92);
