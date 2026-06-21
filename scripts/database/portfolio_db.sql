@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2026 at 02:27 PM
+-- Generation Time: Jun 21, 2026 at 07:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,9 +40,10 @@ CREATE TABLE `portfolio` (
 --
 
 INSERT INTO `portfolio` (`projectNum`, `subject`, `projectName`, `projectTag`, `details`) VALUES
-(1, 'HTML', 'Coffee Mania', 'HTML.CSS.JS', 'projects/PETA for Computer 9 Fetalcorin, John Miguel L - Copy'),
-(2, 'C++', 'Food Ordering System', 'C++,GitHub,Git', 'https://github.com/JM21341/Food-Ordering-System'),
-(3, 'C++', 'Bank Savings Management Sytem', 'C++,GitHub,Git', 'https://github.com/JM21341/Bank-Savings-Management-System-Using-C-');
+(1, 'HTML', 'Coffee Mania', 'HTML.CSS.JS', 'projects/PETA for Computer 9 Fetalcorin, John Miguel L - Copy/index.html'),
+(2, 'C++', 'Food Ordering System', 'C++,GitHub,Git', 'projects/project2.html'),
+(3, 'C++', 'Bank Savings Management Sytem', 'C++,GitHub,Git,DSA', 'projects/project3.html'),
+(4, 'DBMS', 'DBMS Final Project', 'HTML,CSS,JS,SQL,PHP,xampp', 'projects/project4.html');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +63,7 @@ ALTER TABLE `portfolio`
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `projectNum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `projectNum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
