@@ -14,5 +14,5 @@ The source file above merely shows the source code. However, the developer has f
 3. If you don't want to modify the DocumentRoot, head to the htdocs directory in your local server folder.
 4. Clone the repository within the htdocs folder.
 5. Open your local server and access it. (Example: Activate Apache and MySQL for XAMPP)
-6. Go to SQK in the navbar and copy-paste the SQL file in the scripts/database directory.
+6. Go to SQL in the navbar and copy-paste the SQL file from the scripts/database directory.
 7. Once done, type in your web browser "localhost/Folder_Name/index.html". This should open the portfolio in a local server.
