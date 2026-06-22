@@ -3,76 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/projects.js" defer></script>
+    <title>Bank Savings Management System | Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts/main.js" defer></script>
 </head>
-<body id="projects">
+<body id="project3" class="project-accordion">
     <div id="container">
         <div id="currentTime"></div>
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a> </li
+                    <li><a href="../index.html">HOME</a> </li
                         >
-                    <li><a href="abouts.html">ABOUTS</a> </li>
+                    <li><a href="../abouts.html">ABOUTS</a> </li>
 
-                    <li><a href="projects.html">PROJECTS</a> </li>
+                    <li><a href="../projects.html">PROJECTS</a> </li>
 
-                    <li><a href="resume.html">RESUME</a> </li>
-
-                    <li><a href="contacts.html">CONTACTS</a> </li>
+                    <li><a href="../contacts.html">CONTACTS</a> </li>
                 </ul>
             </nav>
         </header>
-        <section id="projects">
-            <div id="projects-header">
-                <h1>Projects</h1>
-                <p>A collection of things I've built</p>
-            </div>
- 
-            <div id="projects-container">
-                <button id="add-project-btn" aria-label="Add a new project">
-                    <span class="add-icon">+</span>
-                    <span class="add-label">Add Project</span>
-                </button>
+        <section class="project">
+            <div class="project-container">
+                <div class="project-heading">
+                    <h1>Bank Savings Management System</h1>
+                    <h2>A C++ Project Using CLI Manager</h2>
+                    <h2>Made by: John Miguel L. Fetalcorin</h2>
+                </div>
+
+                <div class="project-details">
+                    <details>
+                        <summary>Chapter 1 : Pre Creation</summary>
+                        <h1>Introduction</h1>
+                        <p>
+                            &emsp; &emsp; This project serves as a practice for my software engineering career. This will be my first biggest project and repository. This may serve as a guideline for beginners or may also be used a source for those who wishes for this. This README will serve as the documentation of the project, showing how the developer planned, made and tested the project. Note that this project also uses AI as a tool for suggestions and checking for mistakes not seen by the programmer. The AI tool that will be used in this program are: Claude, CoPilot, and ChatGPT.
+                        </p>
+
+                        <h1>Contents</h1>
+
+                        <h2>This program includes the following topics:</h2>
+
+                        <ol>
+                            <li>Basic I/O in C++</li>
+                            <li>Variables and Data Types</li>
+                            <li>Arithmetic, Relational and Logical Operators</li>
+                            <li>Conditional Statements</li>
+                            <li>Loops and Control Statements</li>
+                            <li>Functions</li>
+                            <li>Arrays</li>
+                            <li>Strings</li>
+                            <li>Structs</li>
+                            <li>File Handling</li>
+                            <li>Objects and Classes</li>
+                            <li>Namespaces</li>
+                        </ol>
+
+                        <h2>This program may also include the following concepts:</h2>
+
+                        <ol>
+                            <li>Function modularization</li>
+                            <li>Basic Object-Oriented Programming</li>
+                            <li>Linked Lists</li>
+                            <li>Algorithms</li>
+                            <li>Console-Based Approach</li>
+                            <li>Menu-driven Program</li>
+                            <li>File-Based Records Management System</li>
+                            <li>Testing and Debugging</li>
+                        </ol>
+                        
+                        <h1>Planning</h1>
+
+                        <h2>How the program operates:</h2>
+
+                        <ol>
+                            <li>The program will use a menu-driven approach, meaning the user must input a choice in order for the program to proceed.</li>
+
+                            <li>Classes will be used to determine the type of users and seperate the functions by methods.</li>
+
+                            <li>Linked lists nodes will be used to store users.</li>
+
+                            <li>There will be two types of users: client and admin.</li>
+
+                            <li>The CLIENT may use three operations: Transaction (check savings, deposit, withdraw, view transaction history); Personal Info(view info, edit info); and Inbox (check inbox, view messages, send inbox).</li>
+
+                            <li>The ADMIN may use three operations: Transaction (check savings, deposit, withdraw, view transaction history); Personal Info(view info, edit info); Inbox (check inbox, view messages, send inbox); and Admin Controls (add user, remove user, view all users, view user, view logs).</li>
+                        </ol>
+
+                        <br>
+                    </details>
+                    <details>
+                        <summary>Chapter 2 : Development</summary>
+
+                        <h1>Prerequisite Requirements</h1>
+                        <h2>Note: These prerequisites are based from what I have and used. This program may or may not run for you who has a different compiler.</h2>
+
+                        <ol>
+                            <li>Clang++ Compiler</li>
+                            <li>Clangd LLVM</li>
+                            <li>CMake</li>
+                            <li>Local Code Editor</li>
+                            <li>MSYS2 and/or MINGW</li>
+                        </ol>
+
+                        <h1>Experiences</h1>
+                        <p>
+                            &emsp; &emsp; This program was made by my own hands with some help with ChatGPT and Claude AI in simple error fixing, and CoPilot for debugging. At first, there was no problems faced, especially when I was starting out with the main function. I thought it would be easy but I was wrong, especially when I'm still a beginner for C++. The coding process wasn't all that hard, it's the debugging process which consumed all my time.
+
+                            <br><br>
+
+                            &emsp; &emsp; The first error came when I was reading the data from the file. The error was that the program would exit before the login even occurred. That means, there was a segmentation fault. I had to look through my code but I still can't find the error. So I asked CoPilot, then it answered that the file path was wrong. I put "../records/user.csv", which was wrong and the very cause of this first error. I changed it to a full directory so it is fixed.
+
+                            <br><br>
+
+                            &emsp; &emsp; Just after fixing the first error, another bug came. Whenever I try to do transactions, the data won't save in the file (both in transactiion_database and user_database) and would just exit the program. I knew that it was another error in the file, so I changed up the updateTransactionFile(). I've learned from the previous error that I should use the right directory. Then, it was fixed, but another bug came in the transactions as well.
+
+                            <br><br>
+
+                            &emsp; &emsp; The date the user inputs doesn't save. When I tried to do transactions, I entered in the date. I need to press enter two times so that the next line could run, which was one more bug. However, the bug was when the data was saved. I checked transaction history in the program and it says that the transaction had no date, that goes the same for the transaction_database file. So, there was something wrong with the input. Then I saw it, the problem was that the ignoring of input buffer was inserted before the INPUT, instead of before the output of "Enter date:".
+
+                            <br><br>
+
+                            &emsp; &emsp; There were bugs also in the editing of user profile. The data saved locally in the program, and won't save in the file. I fixed it by first, checking any errors in the updateFile(). Then I saw that there was an error in the directory again. I fixed it, but there was another problem. Now, the program only deletes the file but does not rename the temp.txt. I asked CoPilot to suggest me a fix for this without editing anything in the program, compiling or running it. It told me that the error was because of the directory again. I fixed the directory again, and it suggested me to make my code shorter. I asked suggestions on how and I learned that there was a "path" object in the filesystem header.
+                        </p>
+
+                        <br>
+                        
+                    </details>
+                    <details>
+                        <summary>Chapter 3 : Post-Development</summary>
+
+                        <h1>Conclusion</h1>
+                        <p>
+                            &emsp; &emsp; This program may or may not continue later once the developer has learned more things. This is merely a practice project and should not be treated major as such. I want to test my skills that I've learned from the courses I took. This program applies the basics from I/O to basics of OOP. This project may be used as a reference for the developer in the near future or for other aspiring developers who seek to learn C++ or other languages.
+                        </p>
+
+                        <h1>Reflection</h1>
+                        <p>
+                            &emsp; &emsp; I have learned a lot in this simple project. I was able to practice my basic git branching and merging skills, I was also able to remember how to remotely control a repository using the basic commands of git.
+
+                            <br><br>
+
+                            &emsp; &emsp; This minor project was also a big help for me as a beginner. I learned about the errors that I may face when handling files and how I am able to fix it. Change its directory, and set it as the directory from the local disk to that exact file. I believe that it is more safer when the directory of the cpp file is in another folder where the records cannot be EASILY accessed.
+
+                            <br><br>
+
+                            &emsp; &emsp; I was also able to learn error handling in its simplest form. I was able to generate an error code and use that as a reference. I also realized that error handling is used not only to check if the file is opened, but also if the file was deleted successfully and if there was an error in renaming the file. I am satisfied with the outcome and I am happy that this project was able to enhance my skills, even for a litle.
+                        </p>
+                        
+                    </details>
+                    <details>
+                        <summary>Project Source</summary>
+                        <h2>View the project here</h2>
+
+                        <a href="https://github.com/JM21341/Bank-Savings-Management-System-Using-C-" target="_blank"><img src="../imgs/icons/github.png" alt="github-icon"></a> 
+                        <h6>View Repository</h6>
+                    </details>
+                </div>
             </div>
         </section>
-    </div>
- 
-    <!-- ADD PROJECT MODAL -->
-    <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
-        <div class="modal-box">
-            <h2 id="modal-heading">Add Project</h2>
- 
-            <div class="modal-field">
-                <label for="modal-title">Project Name</label>
-                <input type="text" id="modal-title" placeholder="e.g. Coffee Mania">
-            </div>
- 
-            <div class="modal-field">
-                <label for="modal-lang">Subject / Language</label>
-                <input type="text" id="modal-lang" placeholder="e.g. HTML, C++, JS">
-            </div>
- 
-            <div class="modal-field">
-                <label for="modal-tags">Tech Tags <span class="field-hint">(comma-separated)</span></label>
-                <input type="text" id="modal-tags" placeholder="e.g. HTML,CSS,JavaScript">
-            </div>
- 
-            <div class="modal-field">
-                <label for="modal-href">Link or Folder Path</label>
-                <input type="text" id="modal-href" placeholder="e.g. projects/my-project or https://github.com/...">
-            </div>
- 
-            <p id="modal-error" class="modal-error" aria-live="polite"></p>
- 
-            <div class="modal-actions">
-                <button id="modal-cancel" class="btn-ghost">Cancel</button>
-                <button id="modal-submit" class="btn-solid">Add Project</button>
-            </div>
-        </div>
+
     </div>
 </body>
 </html>
